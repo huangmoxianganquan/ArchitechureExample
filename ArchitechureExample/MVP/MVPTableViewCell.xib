@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MVPTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNn-QA-W6F">
+                        <rect key="frame" x="10" y="10" width="60" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="tsI-7f-NgK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dI-B9-fWU">
+                        <rect key="frame" x="110" y="10" width="60" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Y42-Wj-bdY"/>
+                        </constraints>
+                        <state key="normal" title="队首"/>
+                        <connections>
+                            <action selector="insertHeadBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="K6e-2i-8Zx"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSf-5n-0F2">
+                        <rect key="frame" x="180" y="10" width="60" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="aWo-e0-bJk"/>
+                        </constraints>
+                        <state key="normal" title="移除"/>
+                        <connections>
+                            <action selector="removeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QJl-1a-vVz"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCz-rh-Bac">
+                        <rect key="frame" x="250" y="10" width="60" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="GLf-56-qAj"/>
+                        </constraints>
+                        <state key="normal" title="队尾"/>
+                        <connections>
+                            <action selector="insertEndBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="prm-0A-Uca"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oCz-rh-Bac" firstAttribute="leading" secondItem="CSf-5n-0F2" secondAttribute="trailing" constant="10" id="9z4-4l-Bcp"/>
+                    <constraint firstItem="5dI-B9-fWU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DG9-5Q-0LB"/>
+                    <constraint firstItem="CSf-5n-0F2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GAR-Kb-1C3"/>
+                    <constraint firstAttribute="bottom" secondItem="CSf-5n-0F2" secondAttribute="bottom" constant="10" id="JL6-tl-5JE"/>
+                    <constraint firstAttribute="bottom" secondItem="NNn-QA-W6F" secondAttribute="bottom" constant="10" id="PJt-ja-xW5"/>
+                    <constraint firstAttribute="bottom" secondItem="oCz-rh-Bac" secondAttribute="bottom" constant="10" id="Vd3-hx-ah7"/>
+                    <constraint firstItem="oCz-rh-Bac" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bCx-uN-HrV"/>
+                    <constraint firstItem="NNn-QA-W6F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="flw-ap-6aI"/>
+                    <constraint firstAttribute="trailing" secondItem="oCz-rh-Bac" secondAttribute="trailing" constant="10" id="isD-gX-ZAe"/>
+                    <constraint firstItem="CSf-5n-0F2" firstAttribute="leading" secondItem="5dI-B9-fWU" secondAttribute="trailing" constant="10" id="jmI-md-uCK"/>
+                    <constraint firstItem="NNn-QA-W6F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pAH-1C-YTn"/>
+                    <constraint firstAttribute="bottom" secondItem="5dI-B9-fWU" secondAttribute="bottom" constant="10" id="ssR-i7-qUp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="insertEndBtn" destination="oCz-rh-Bac" id="C0z-Hn-SEj"/>
+                <outlet property="insertHeadBtn" destination="5dI-B9-fWU" id="y1U-bb-tO9"/>
+                <outlet property="removeBtn" destination="CSf-5n-0F2" id="Us3-7w-64W"/>
+                <outlet property="titleLabel" destination="NNn-QA-W6F" id="xIz-60-aRO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
